@@ -70,7 +70,21 @@ div.container>div.content>a{
     border-radius: 8px;
 }
 
-div.container>div.content>a:hover{
+@keyframes change-color {
+    from {
+        background-color: var(--Grey);
+        color: #fff;
+    }
+    to {
+        background-color: var(--Green);
+        color: var(--Off-black);
+    }
+}
+
+div.container>div.content>a:hover, div.container>div.content>a:focus{
     background-color: var(--Green);
     color: var(--Off-black);
+    outline: none;
+    animation: change-color;
+    animation-duration: 0.5s;
 }
